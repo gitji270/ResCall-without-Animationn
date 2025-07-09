@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
   font-family: Gilroy;
   src: url(./Gilroy-Medium.woff2) format(woff2);
 }
@@ -56,6 +56,13 @@ body, html {
   display: flex;
   align-items: center;
   gap: 2.5vw;
+}
+
+ 
+#nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.4vw;
 }
 
 #nav-left a,
