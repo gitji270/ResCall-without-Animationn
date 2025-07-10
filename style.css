@@ -1,4 +1,4 @@
- @font-face {
+@font-face {
   font-family: Gilroy;
   src: url(./Gilroy-Medium.woff2) format(woff2);
 }
@@ -10,17 +10,37 @@
   font-family: Gilroy, sans-serif;
 }
 
-body, html {
+body,
+html {
   height: 100%;
   width: 100%;
+  overflow: hidden;
 }
 
+.main {
+  overflow: hidden;
+  position: relative;
+}
 
 *::selection {
-    color: #fff;
-    background-color: #2b2929;
+  color: #fff;
+  background-color: #2b2929;
 }
- 
+
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: background 0.3s ease;
+}
+
 .page1 {
   min-height: 100vh;
   width: 100%;
@@ -58,7 +78,6 @@ body, html {
   gap: 2.5vw;
 }
 
- 
 #nav-right {
   display: flex;
   align-items: center;
@@ -76,7 +95,7 @@ body, html {
 }
 
 #nav-left a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -4px;
@@ -176,9 +195,9 @@ body, html {
   border-radius: 20px;
 }
 
- /* page2 */
- #page2 {
-  min-height: 80vh;  
+/* page2 */
+#page2 {
+  min-height: 80vh;
   width: 100%;
   background-color: #ffffff;
 }
@@ -216,7 +235,7 @@ body, html {
 .steps {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   width: 100%;
   max-width: 1000px;
   gap: 2vw;
@@ -261,7 +280,7 @@ body, html {
   color: rgb(35, 33, 33);
   line-height: 1.5;
 }
- 
+
 #page3 {
   background: linear-gradient(to right, #e8f0ff, #f0f4ff);
   padding: 5vw 8vw;
@@ -281,13 +300,12 @@ body, html {
   margin-bottom: 1vw;
 }
 
-.feedback-section h2 span{
-  font-weight: 400 ;
+.feedback-section h2 span {
+  font-weight: 400;
 }
- 
 
 .user-feedback {
-  margin-top: 3vw;
+  margin-top: 1.5vw;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -347,7 +365,6 @@ body, html {
   margin-top: 0.6vw;
 }
 
-
 #page4 {
   width: 100%;
   background-color: white;
@@ -357,7 +374,7 @@ body, html {
   gap: 5vw;
 }
 
- /* Pricing section */
+/* Pricing section */
 .pricing-section {
   text-align: center;
 }
@@ -367,7 +384,7 @@ body, html {
   color: #004080;
 }
 
-.pricing-section p{
+.pricing-section p {
   font-size: 1.1vw;
   color: #004080e4;
   margin: 1vw 3vw;
@@ -386,7 +403,7 @@ body, html {
   padding: 2.5vw 2vw;
   border-radius: 15px;
   width: 280px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   text-align: left;
   transition: transform 0.3s ease;
 }
@@ -420,7 +437,6 @@ body, html {
   margin-bottom: 0.8vw;
 }
 
- 
 /* banner */
 .banner {
   background: linear-gradient(to right, #004080, #0059b3);
@@ -435,10 +451,9 @@ body, html {
   margin-bottom: 2vw;
 }
 
-
 #page5 {
   width: 100%;
-   background: linear-gradient(to right, #004080ac, #005ab3cc);
+  background: linear-gradient(to right, #004080ac, #005ab3cc);
   padding: 5vw 8vw;
 }
 
@@ -446,7 +461,7 @@ body, html {
   background-color: white;
   padding: 3vw;
   border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
@@ -518,13 +533,13 @@ body, html {
   font-weight: 500;
 }
 
-.about-section h2 span{
-   color: #004080;
+.about-section h2 span {
+  color: #004080;
   font-weight: 500;
 }
 .about-content p {
   font-size: 1.2vw;
-  color:  rgb(45, 31, 34);
+  color: rgb(45, 31, 34);
   line-height: 1.7;
   margin-bottom: 2vw;
   /* text-align: left; */
@@ -556,10 +571,10 @@ body, html {
   font-size: 1.1vw;
   font-weight: 600;
   color: #004080;
-  box-shadow: 0 0 8px rgba(0, 0,0, 0.05);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
 
-.member:hover{
+.member:hover {
   background-color: #004080f0;
   color: white;
 }
